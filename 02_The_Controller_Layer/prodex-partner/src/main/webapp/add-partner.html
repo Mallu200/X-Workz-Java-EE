@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Partner | Prodex ERP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --prodex-navy: #0f172a;
+            --prodex-slate: #475569;
+            --accent-border: #cbd5e1;
+            --bg-workspace: #f8fafc;
+        }
+
+        body {
+            background-color: var(--bg-workspace);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            color: var(--prodex-navy);
+        }
+
+        .partner-card {
+            max-width: 500px;
+            width: 90%;
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 8px;
+            border-left: 6px solid var(--prodex-navy);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .erp-header h3 {
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            color: var(--prodex-navy);
+        }
+
+        .erp-header p {
+            font-size: 0.875rem;
+            color: var(--prodex-slate);
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--prodex-slate);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .form-control, .form-select {
+            border: 1.5px solid var(--accent-border);
+            padding: 12px;
+            border-radius: 6px;
+            background-color: #ffffff;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--prodex-navy);
+            box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.05);
+            outline: none;
+        }
+
+        .btn-prodex {
+            background-color: var(--prodex-navy);
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            font-weight: 600;
+            width: 100%;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .btn-prodex:hover {
+            background-color: #1e293b;
+            transform: translateY(-1px);
+        }
+
+        .footer-ref {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="partner-card">
+    <div class="erp-header">
+        <h3>Prodex Business Partner</h3>
+        <p>Onboard new business entities into the ERP system.</p>
+    </div>
+
+    <form action="save-partner" method="POST">
+        <div class="mb-3">
+            <label class="form-label">Company Name</label>
+            <input type="text" name="partnerName" placeholder="Enter legal company name" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Partner Type</label>
+            <select name="type" class="form-select" required>
+                <option value="" disabled selected>Select Relationship Type</option>
+                <option value="Vendor">Vendor (Creditor)</option>
+                <option value="Customer">Customer (Debtor)</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-prodex">
+            Add Partner to Registry
+        </button>
+    </form>
+
+    <div class="footer-ref">
+        PRODEX ERP | PARTNER MANAGEMENT MODULE V1.0
+    </div>
+</div>
+
+</body>
+</html>

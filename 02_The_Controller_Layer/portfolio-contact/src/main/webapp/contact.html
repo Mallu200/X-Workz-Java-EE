@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Submission | WonderWand World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --magic-purple: #6c5ce7;
+            --soft-sky: #f0f7ff;
+            --wonder-gold: #fdcb6e;
+            --charcoal: #2d3436;
+        }
+
+        body {
+            background-color: var(--soft-sky);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .wonder-card {
+            max-width: 600px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0 15px 35px rgba(108, 92, 231, 0.1);
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: var(--magic-purple);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border: none;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .form-container {
+            padding: 40px;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            border: 2px solid #edf2f7;
+            border-radius: 12px;
+            padding: 12px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--magic-purple);
+            box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.1);
+        }
+
+        .btn-wonder {
+            background: var(--magic-purple);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 700;
+            width: 100%;
+            margin-top: 10px;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn-wonder:hover {
+            background: #5b4cc4;
+            transform: scale(1.02);
+            color: white;
+        }
+
+        .character-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container d-flex justify-content-center">
+    <div class="wonder-card">
+        <div class="card-header">
+            <span class="character-icon">✨</span>
+            <h3>WonderWand Script Submission</h3>
+        </div>
+
+        <div class="form-container">
+            <form action="submit-script" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Who is speaking?</label>
+                    <input type="text" name="charName" placeholder="Enter Character Name (e.g., Barnaby Bear)" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">What do they say?</label>
+                    <textarea name="dialogue" rows="5" placeholder="Write the magical dialogue here..." class="form-control" required></textarea>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Emotion / Expression</label>
+                    <select name="emotion" class="form-control">
+                        <option value="happy">Happy/Excited</option>
+                        <option value="curious">Curious/Thinking</option>
+                        <option value="surprised">Surprised</option>
+                        <option value="calm">Calm/Narrating</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-wonder">
+                    Send to Animation Studio
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WonderWand | Script Submission</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --studio-navy: #0f172a;
+            --slate-accent: #475569;
+            --action-blue: #38bdf8;
+            --bg-canvas: #f1f5f9;
+        }
+
+        body {
+            background-color: var(--bg-canvas);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .script-card {
+            max-width: 550px;
+            width: 90%;
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 16px;
+            border-left: 8px solid var(--studio-navy);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .studio-header h3 {
+            color: var(--studio-navy);
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.5rem;
+        }
+
+        .studio-header p {
+            color: var(--slate-accent);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--slate-accent);
+            letter-spacing: 0.05em;
+        }
+
+        .form-control {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: #f8fafc;
+            transition: all 0.2s ease;
+        }
+
+        .form-control:focus {
+            background-color: #ffffff;
+            border-color: var(--action-blue);
+            box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background-color: var(--studio-navy);
+            color: white;
+            border: none;
+            padding: 14px;
+            font-weight: 600;
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 1rem;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #1e293b;
+            transform: translateY(-1px);
+            color: var(--action-blue);
+        }
+
+        .footer-brand {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="script-card">
+    <div class="studio-header">
+        <h3>WonderWand Script Submission</h3>
+        <p>Drafting the next magical adventure.</p>
+    </div>
+
+    <form action="submit-script" method="POST">
+        <div class="mb-3">
+            <label class="form-label">Character Name</label>
+            <input type="text" name="charName" placeholder="e.g. Wandie the Wizard" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Dialogue</label>
+            <textarea name="dialogue" placeholder="Enter the character's lines here..." class="form-control" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">
+            Submit to WonderWand
+        </button>
+    </form>
+
+    <div class="footer-brand">
+        PRODUCER PORTAL | WONDERWAND WORLD
+    </div>
+</div>
+
+</body>
+</html>

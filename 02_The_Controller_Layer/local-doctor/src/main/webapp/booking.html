@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | MyLocalDoctor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --medical-navy: #1a2a40;
+            --slate-text: #4a5568;
+            --input-focus: #3182ce;
+            --bg-soft: #f7fafc;
+        }
+
+        body {
+            background-color: var(--bg-soft);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            color: var(--slate-text);
+        }
+
+        .booking-card {
+            max-width: 480px;
+            width: 90%;
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border-top: 6px solid var(--medical-navy);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .clinic-header h3 {
+            color: var(--medical-navy);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .clinic-header p {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #718096;
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--medical-navy);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .form-control {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 1.2rem;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .form-control:focus {
+            border-color: var(--input-focus);
+            box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+        }
+
+        .btn-book {
+            background-color: var(--medical-navy);
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            font-weight: 600;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-book:hover {
+            background-color: #101d2e;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .notice {
+            font-size: 0.75rem;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #a0aec0;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="booking-card">
+    <div class="clinic-header">
+        <h3>MyLocalDoctor Appointment</h3>
+        <p>Please enter details to schedule your visit.</p>
+    </div>
+
+    <form action="confirm-appointment" method="POST">
+        <div class="mb-1">
+            <label class="form-label">Patient Name</label>
+            <input type="text" name="pName" placeholder="Full Legal Name" class="form-control" required>
+        </div>
+
+        <div class="mb-1">
+            <label class="form-label">Preferred Date</label>
+            <input type="date" name="appDate" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn-book">
+            Book Now
+        </button>
+    </form>
+
+    <div class="notice">
+        By booking, you agree to our clinic's privacy policy.<br>
+        A confirmation will be sent to the registered contact.
+    </div>
+</div>
+
+</body>
+</html>
