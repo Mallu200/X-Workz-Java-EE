@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopZen | Calm Shopping</title>
+    <style>
+        :root { --zen-green: #89a894; --soft-gray: #f9f9f9; --dark: #333; }
+        body { font-family: 'Helvetica Neue', Helvetica, sans-serif; margin: 0; background: var(--soft-gray); color: var(--dark); }
+        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .hero { padding: 60px 5%; text-align: center; background: white; margin-bottom: 20px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px 5%; }
+        .product-card { background: white; padding: 15px; border-radius: 12px; text-align: center; transition: transform 0.2s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .price { color: var(--zen-green); font-weight: bold; }
+        .btn { display: inline-block; padding: 10px 20px; background: var(--zen-green); color: white; text-decoration: none; border-radius: 25px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h2 style="margin:0; color: var(--zen-green);">ShopZen</h2>
+    <div>
+        <a href="cart" style="text-decoration:none; color:var(--dark);">🛒 Cart</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Find Your Balance.</h1>
+    <p>Minimalist products for a mindful lifestyle.</p>
+</section>
+
+<div class="product-grid">
+    <div class="product-card">
+        <div style="height:150px; background:#eee; border-radius:8px; margin-bottom:10px;"></div>
+        <h3>Zen Candle</h3>
+        <p class="price">$18.00</p>
+        <a href="addToCart?id=1" class="btn">Add to Cart</a>
+    </div>
+    <div class="product-card">
+        <div style="height:150px; background:#eee; border-radius:8px; margin-bottom:10px;"></div>
+        <h3>Ceramic Vase</h3>
+        <p class="price">$45.00</p>
+        <a href="addToCart?id=2" class="btn">Add to Cart</a>
+    </div>
+</div>
+
+</body>
+</html>

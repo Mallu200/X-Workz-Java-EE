@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareSync Clinic System - Home</title>
+    <style>
+        :root {
+            --primary: #2a9d8f;
+            --secondary: #264653;
+            --light: #f4f9f9;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--light); }
+        header { background: var(--secondary); color: white; padding: 1rem; text-align: center; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card h3 { color: var(--secondary); }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .btn:hover { background-color: #21867a; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CareSync Clinic Management</h1>
+    <p>Efficient Care, Synchronized.</p>
+</header>
+
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <h3>Patients</h3>
+            <p>Register new patients or view medical history.</p>
+            <a href="patient-reg.html" class="btn">Register Patient</a>
+        </div>
+
+        <div class="card">
+            <h3>Appointments</h3>
+            <p>Schedule, reschedule, or cancel visits.</p>
+            <a href="appointments" class="btn">Manage Schedule</a>
+        </div>
+
+        <div class="card">
+            <h3>Doctors</h3>
+            <p>View duty rosters and specialist availability.</p>
+            <a href="doctor-list" class="btn">View Directory</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

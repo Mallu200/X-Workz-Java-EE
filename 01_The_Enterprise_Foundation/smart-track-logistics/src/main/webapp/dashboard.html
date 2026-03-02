@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTrack | Warehouse Dashboard</title>
+    <style>
+        :root {
+            --sidebar-bg: #2c3e50;
+            --header-bg: #ecf0f1;
+            --accent: #e67e22; /* Safety Orange */
+            --success: #27ae60;
+        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; display: flex; height: 100vh; background: #f4f7f6; }
+
+        /* Sidebar Navigation */
+        .sidebar { width: 250px; background: var(--sidebar-bg); color: white; padding: 20px; box-sizing: border-box; }
+        .sidebar h2 { color: var(--accent); font-size: 1.5rem; margin-bottom: 30px; }
+        .nav-links { list-style: none; padding: 0; }
+        .nav-links li { padding: 15px 0; border-bottom: 1px solid #34495e; }
+        .nav-links a { color: #bdc3c7; text-decoration: none; display: block; }
+        .nav-links a:hover { color: white; }
+
+        /* Main Content Area */
+        .main-content { flex-grow: 1; overflow-y: auto; }
+        header { background: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+        .dashboard-grid { padding: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .stat-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid var(--accent); }
+        .stat-card h3 { margin: 0; color: #7f8c8d; font-size: 0.9rem; text-transform: uppercase; }
+        .stat-card .value { font-size: 2rem; font-weight: bold; color: var(--sidebar-bg); margin-top: 10px; display: block; }
+
+        .table-section { padding: 0 30px 30px; }
+        table { width: 100%; background: white; border-collapse: collapse; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        th { background: #f8f9fa; color: #7f8c8d; text-align: left; padding: 15px; }
+        td { padding: 15px; border-top: 1px solid #eee; }
+        .status-pill { padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; background: #d5f5e3; color: #1d8348; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>SmartTrack</h2>
+    <ul class="nav-links">
+        <li><a href="dashboard.html">🏠 Dashboard</a></li>
+        <li><a href="inventory">📦 Inventory List</a></li>
+        <li><a href="incoming.html">🚚 Inbound Shipments</a></li>
+        <li><a href="outgoing.html">🛒 Outbound Orders</a></li>
+        <li><a href="reports">📊 Analytics</a></li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <header>
+        <h1>Warehouse Overview</h1>
+        <div class="user-profile">Admin User | <strong>WH-01</strong></div>
+    </header>
+
+    <div class="dashboard-grid">
+        <div class="stat-card">
+            <h3>Total SKUs</h3>
+            <span class="value">1,284</span>
+        </div>
+        <div class="stat-card" style="border-left-color: #3498db;">
+            <h3>Pending Shipments</h3>
+            <span class="value">14</span>
+        </div>
+        <div class="stat-card" style="border-left-color: #e74c3c;">
+            <h3>Low Stock Alerts</h3>
+            <span class="value">8</span>
+        </div>
+    </div>
+
+    <div class="table-section">
+        <h3>Recent Activity</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Item ID</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Action</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>#ST-9021</td>
+                <td>Industrial Motors</td>
+                <td>Hardware</td>
+                <td>Stock In</td>
+                <td><span class="status-pill">Completed</span></td>
+            </tr>
+            <tr>
+                <td>#ST-4432</td>
+                <td>Zinc Sheets</td>
+                <td>Raw Material</td>
+                <td>Stock Out</td>
+                <td><span class="status-pill">Processing</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

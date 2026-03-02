@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CorpConnect ERP | Secure Login</title>
+    <style>
+        :root {
+            --corp-blue: #1a3a5f;
+            --accent-gold: #c5a059;
+            --bg-gray: #f0f2f5;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            border-top: 5px solid var(--corp-blue);
+        }
+        .login-card h2 { color: var(--corp-blue); margin-bottom: 5px; }
+        .login-card p { color: #666; font-size: 0.9rem; margin-bottom: 25px; }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #444; }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--corp-blue);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn-login:hover { background-color: #122a46; }
+        .footer { margin-top: 20px; font-size: 0.8rem; color: #888; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="login-card">
+    <h2>CorpConnect ERP</h2>
+    <p>Enterprise Resource Planning Gateway</p>
+
+    <form action="loginAuth" method="POST">
+        <div class="form-group">
+            <label for="username">Employee ID / Email</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn-login">Authorize Access</button>
+    </form>
+
+    <div class="footer">
+        Need help? Contact <a href="mailto:support@corpconnect.com">IT Support</a>
+    </div>
+</div>
+
+</body>
+</html>
